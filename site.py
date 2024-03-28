@@ -64,9 +64,9 @@ if selected_page == "Overview":
     st.write(f"Date with Most Posts: {date_most_posts}, (11111)")
     st.write(f"Average Posts/Day: {avg_posts_per_day}")
     st.write(f"Bottom 25%/Median/Top-25% likes/post: {likes_percentile}")
-    st.write("Total posts with height greater than width: 2240106 (88.25%)")
-    st.write("Total posts with width greater than height: 132413 (5.21%)")
-    st.write("Total square posts: 165796(6.53%)")
+    st.write("Total portrait posts (h>w): 2240106 (88.25%)")
+    st.write("Total landscape posts (w>h): 132413 (5.21%)")
+    st.write("Total square posts (w=h): 165796(6.53%)")
     st.write(stats)
 
 
