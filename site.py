@@ -14,6 +14,7 @@ date_most_posts = "2024-01-14"
 avg_posts_per_day = 4704.09
 likes_percentile = [3, 9, 50]
 stats = """
+\nPosts with 0 likes: 147750 (5.82%)
 \nPosts with more than 10 likes: 743683 (29.28%)
 \nPosts with more than 20 likes: 354123 (13.94%)
 \nPosts with more than 30 likes: 222132 (8.74%)
