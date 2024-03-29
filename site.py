@@ -125,5 +125,6 @@ elif selected_page == "Posts by Day":
 elif selected_page == "Posts by Hour":
     st.subheader("Posts by Hour (UTC)")
     st.bar_chart(posts_by_hour_df.set_index("Hour"))
-elif selected_page == "Samplers"
+
+elif selected_page == "Samplers":
     st.dataframe(df)
