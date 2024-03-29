@@ -48,8 +48,44 @@ posts_by_hour_data = {
 }
 posts_by_hour_df = pd.DataFrame(posts_by_hour_data)
 
+data = {
+    "Euler Ancestral": 89198,
+    "DPM++ 2M Karras": 1356719,
+    "DPM++ 3M SDE Exponential": 1013,
+    "KDPM2 Ancestral": 2566,
+    "DPM adaptive": 112,
+    "Euler": 18374,
+    "DPM++ SDE Karras": 29602,
+    "DPM++ 3M SDE Karras": 693,
+    "DPM++ 2M SDE Karras": 402,
+    "KDPM2": 22211,
+    "DDIM": 11846,
+    "Heun": 2631,
+    "LMS": 535,
+    "UniPC": 194,
+    "PLMS": 102,
+    "Restart": 619,
+    "DPM++ 2M SDE Heun Exponential": 131,
+    "DPM++ 2M SDE Heun Karras": 254,
+    "DPM++ 2M SDE Heun": 35,
+    "DPM++ 2M": 84,
+    "DPM fast": 55,
+    "DPM++ 2M SDE": 51,
+    "DPM++ 2S a Karras": 273,
+    "LMS Karras": 49,
+    "DPM++ 2M SDE Exponential": 172,
+    "DPM2 a Karras": 112,
+    "DPM++ 2S a": 87,
+    "DPM++ SDE": 85,
+    "DPM2 Karras": 98,
+    "DPM++ 3M SDE": 88
+}
+
+df = pd.DataFrame.from_dict(data, orient='index', columns=['Count'])
+df = df.reset_index().rename(columns={'index': 'Sampling Method Display Name'})
+
 st.sidebar.title("Navigation")
-selected_page = st.sidebar.radio("", ["Overview", "Top Users", "Posts by Day", "Posts by Hour"])
+selected_page = st.sidebar.radio("", ["Overview", "Top Users", "Posts by Day", "Posts by Hour", "Samplers"])
 
 st.title("YDStat")
 if selected_page == "Overview":
@@ -89,3 +125,5 @@ elif selected_page == "Posts by Day":
 elif selected_page == "Posts by Hour":
     st.subheader("Posts by Hour (UTC)")
     st.bar_chart(posts_by_hour_df.set_index("Hour"))
+elif selected_page == "Samplers"
+    st.dataframe(df)
