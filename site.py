@@ -103,6 +103,13 @@ if selected_page == "Overview":
     st.write("Total portrait posts (h>w): 2240106 (88.25%)")
     st.write("Total landscape posts (w>h): 132413 (5.21%)")
     st.write("Total square posts (w=h): 165796(6.53%)")
+    st.write("More than 1 posts: 39312 users (64.73% of total)")
+    st.write("More than 5 posts: 22800 users (37.54% of total)")
+    st.write("More than 10 posts: 16720 users (27.53% of total)")
+    st.write("More than 25 posts: 10088 users (16.61% of total)")
+    st.write("More than 50 posts: 6427 users (10.58% of total)")
+    st.write("More than 75 posts: 4808 users (7.92% of total)")
+    st.write("More than 100 posts: 3903 users (6.43% of total)")
     st.write(stats)
 
 
